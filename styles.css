@@ -1,0 +1,163 @@
+/*Costum HTML*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    font-family: globalFont;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: globalFont;
+    src: url(assets/font/Afacad-VariableFont_wght.ttf);
+}
+
+.up {
+    transition: 0.8s ease-in-out;
+    display: inline-block;
+    cursor: default;
+    color: default;
+}
+
+.up:hover {
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
+    color: #FFD700;
+}
+
+/*Page*/
+
+#wraps {
+    min-height: 100vh;
+    background-color: #FEFACD;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #5B0E14;
+    height: 6vh;
+    align-items: center;
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    height: 50px;
+    background-color: #FEFACD;
+    border-radius: 50%;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+ul a {
+    color: #FEFACD;
+}
+
+.header h1 {
+    color: #FEFACD;
+}
+
+.landing-page {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 18vh;
+    background-color: #5B0E14;
+    min-height: calc(100vh - 6vh);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    margin: auto;
+    gap: 1rem;
+}
+
+.opening {
+    color: #FEFACD;
+    font-size: 3rem;
+}
+
+.opening-2 {
+    color: #FEFACD;
+    padding-top: 2vh;
+    font-size: 1.5rem;
+}
+
+.mywork-button {
+    background-color: #FEFACD;
+    color: #5B0E14;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 10vh;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.landing-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    text-align: center;
+    padding-top: 10vh;
+    justify-content: center;
+}
+
+.container-skills {
+    color: #FEFACD;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+#about-page {
+    min-height: 100vh;
+    background-color: #FEFACD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-about {
+    background-color: #5B0E14;
+    margin: 0 5vw 0 5vw;
+    padding: 2rem 3rem 2rem 3rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about-photo {
+    height: 200px;
+    border-radius: 20px;
+}
+
+.about-text {
+    color: #FEFACD;
+    font-size: 1.2rem;
+    padding: 5rem;
+    text-align: center;
+}
