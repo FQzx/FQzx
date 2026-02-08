@@ -16,3 +16,23 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     target.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+//Name
+const photo = document.querySelector('.myphoto');
+const faiz = document.querySelector('.faiz');
+
+faiz.innerHTML = '<h3>Faiz Wahyu Setiawan</h3>';
+
+photo.addEventListener('click', () => {
+  faiz.classList.add('active');
+});
+
+photo.addEventListener('mouseenter', () => {
+  faiz.classList.add('active');
+});
+
+photo.addEventListener('mouseleave', () => {
+  faiz.classList.remove('active');
+});
+
+const flex = document.querySelector('.flex-photo');
