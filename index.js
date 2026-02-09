@@ -6,6 +6,22 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 
+//Load Page
+window.addEventListener('load', function () {
+  const loader = document.getElementById('loader');
+
+  loader.style.opacity = '0';
+
+  loader.addEventListener('transitionend', function () {
+    loader.remove();
+  });
+});
+
+loader.innerHTML = '<h1 class=loadingtext>LOADING</h1>';
+loader.style.display = 'flex';
+loader.style.flexDirection = 'column';
+loader.style.order = '2';
+
 requestAnimationFrame(raf)
 
 //Scroll To Fix

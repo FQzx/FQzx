@@ -33,6 +33,48 @@ a {
     color: #FFD700;
 }
 
+/*Loading Page*/
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FEFACD;
+    color: #5B0E14;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+
+#loader::after {
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.4rem solid #FEFACD;
+    border-top: 0.4rem solid #5B0E14;
+    animation: spin 1s linear infinite;
+}
+
+.loadingtext {
+    order: 2;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /*Page*/
 
 #wraps {
