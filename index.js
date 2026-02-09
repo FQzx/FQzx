@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 //Name
-const photo = document.querySelector('.myphoto');
+const photo = document.querySelector('.about-photo');
 const faiz = document.querySelector('.faiz');
 
 faiz.innerHTML = '<h3>Faiz Wahyu Setiawan</h3>';
@@ -35,4 +35,7 @@ photo.addEventListener('mouseleave', () => {
   faiz.classList.remove('active');
 });
 
-const flex = document.querySelector('.flex-photo');
+//H3
+const viewbutton = document.querySelector('#view-button');
+
+viewbutton.innerHTML = '<h3>View All Projects</h3>';
