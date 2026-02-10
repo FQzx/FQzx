@@ -7,8 +7,15 @@
     -ms-overflow-style: none;
 }
 
+html {
+    overflow-x: hidden;
+    overflow-x: clip;
+}
+
 body {
     font-family: globalFont;
+    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 a {
@@ -665,46 +672,67 @@ ul a:hover {
 }
 
 @media screen and (max-width: 35em) {
-
-    .nav-menu {
-        display: flex;
-        font-size: 20px;
-        color: #FEFACD;
+    html {
+        font-size: 10px
     }
 
-    .header-menu a {
-        color: #5B0E14;
+    .landing-skills {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 70vw;
+        gap: 3rem;
     }
 
-    .header-menu {
-        display: flex;
-        flex-direction: column;
+    /*Header*/
+    .fqzxstudio {
+        font-size: 1.5rem;
+    }
+
+    .header-logo {
+        height: 35px;
+    }
+
+    /*About-Page*/
+    .about-photo {
+        height: 180px;    
+    }
+
+    /*Project-Page*/
+    .pic {
+        height: 80px;
+    }
+
+    .container {
+        height: 210px;
+        width: 200px;
+    }
+
+    /*Contact-Page*/
+
+    #contact {
         text-align: center;
-        transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s ease, background-color 0.3s ease;
-        transition-delay: 0s, 0.3s, 0s, 0s;
-        will-change: transform, opacity;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        position: absolute;
-        right: 2rem;
-        top: 8rem;
-        width: 20rem;
-        height: fit-content;
-        font-size: 3rem;
-        z-index: 10;
-        border-radius: 20px;
-        padding-bottom: 1rem;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .contact-flex {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
     }
 
-    .header-menu.active {
-        transition-delay: 0s, 0s, 0s, 0s;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        background-color: #FEFACD;
-        border: #5B0E14 solid 2px;
-        padding: 1rem;
-        border-radius: 10px;
+    .info {
+        font-size: 18px;
     }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contacts {
+        margin: 0 auto;
+        order: 1;
+    }
+
 }
+
