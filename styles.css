@@ -89,6 +89,23 @@ a {
     background-color: #FEFACD;
 }
 
+
+/*Navbar*/
+
+.header-list {
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: none;
+    color: #FEFACD;
+    cursor: default;
+    transition: color 0.3s;
+}
+
+/*Header*/
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -309,7 +326,7 @@ ul a:hover {
     margin-top: 1rem;
     padding: 1rem;
     border: #FEFACD solid 1px;
-    border-radius: 13px;
+    border-radius: 10px;
     cursor: default;
     position: relative;
     overflow: hidden;
@@ -364,7 +381,7 @@ ul a:hover {
     padding: 1rem;
     color: #5B0E14;
     border-radius: 25px;
-    height: 30vh;
+    height: 18rem;
     width: 15rem;
     text-align: center;
     text-align-last: center;
@@ -487,7 +504,8 @@ ul a:hover {
 
 .contact-info {
     padding-top: 1rem;
-    width: 20rem;
+    width: 100%;
+    max-width: 20rem;
 }
 
 .info {
@@ -663,13 +681,6 @@ ul a:hover {
     padding: 1rem;
 }
 
-/*Header*/
-
-.nav-menu {
-    display: none;
-    font-size: 20px;
-    color: #FEFACD;
-}
 
 @media screen and (max-width: 35em) {
     html {
@@ -683,6 +694,53 @@ ul a:hover {
         gap: 3rem;
     }
 
+    @media screen and (max-width: 35em) {
+
+        .nav-menu {
+            display: flex;
+            font-size: 20px;
+            color: #FEFACD;
+            font-size: 20px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .header-menu {
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s ease, background-color 0.3s ease;
+            transition-delay: 0s, 0.3s, 0s, 0s;
+            will-change: transform, opacity;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            position: absolute;
+            right: 2rem;
+            top: 8rem;
+            width: 20rem;
+            height: fit-content;
+            font-size: 20px;
+            z-index: 10;
+            border-radius: 10px;
+            padding-bottom: 1rem;
+        }
+
+        .header-menu.active {
+            transition-delay: 0s, 0s, 0s, 0s;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            background-color: #5B0E14;
+            border: 2px solid #FEFACD;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .header-menu li {
+            list-style: none;
+        }
+    }
+
     /*Header*/
     .fqzxstudio {
         font-size: 1.5rem;
@@ -694,7 +752,7 @@ ul a:hover {
 
     /*About-Page*/
     .about-photo {
-        height: 180px;    
+        height: 180px;
     }
 
     /*Project-Page*/
@@ -707,6 +765,10 @@ ul a:hover {
         width: 200px;
     }
 
+    #view-button {
+        transform: scale(0.9);
+    }
+
     /*Contact-Page*/
 
     #contact {
@@ -715,6 +777,7 @@ ul a:hover {
         margin: 0;
         margin-bottom: 1rem;
     }
+
     .contact-flex {
         flex-direction: column;
         gap: 2rem;
@@ -727,6 +790,8 @@ ul a:hover {
 
     .contact-info {
         order: 2;
+        width: 100%;
+        max-width: none;
     }
 
     .contacts {
@@ -735,4 +800,3 @@ ul a:hover {
     }
 
 }
-
