@@ -33,6 +33,44 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+//Navbar
+const navbar = document.querySelector('.nav-menu');
+const linkmenu = document.querySelector('.header-menu');
+const listmenu = document.querySelectorAll('.header-menu a');
+
+navbar.addEventListener('mouseenter', () => {
+  clearTimeout(timeoutId);
+  navbar.style.color = 'grey';
+
+});
+
+navbar.addEventListener('mouseleave', () => {
+  navbar.style.color = 'rgba(255, 244, 228, 1)';
+});
+
+let timeoutId;
+
+navbar.addEventListener('click', () => {
+  linkmenu.classList.toggle('active');
+});
+
+linkmenu.addEventListener('mouseenter', () => {
+  clearTimeout(timeoutId);
+});
+
+linkmenu.addEventListener('mouseleave', () => {
+  timeoutId = setTimeout(() => {
+    linkmenu.classList.remove('active');
+  }, 500);
+});
+
+listmenu.forEach(link => {
+  link.addEventListener('click', () => {
+    clearTimeout(timeoutId);
+    linkmenu.classList.remove('active');
+  });
+});
+
 //Name
 const photo = document.querySelector('.about-photo');
 const faiz = document.querySelector('.faiz');

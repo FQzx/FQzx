@@ -151,6 +151,12 @@ ul a:hover {
     gap: 1rem;
 }
 
+.landing-page a {
+    width: fit-content;
+    margin: 0 auto;
+    cursor: default;
+}
+
 .opening {
     color: #FEFACD;
     font-size: 3rem;
@@ -488,15 +494,18 @@ ul a:hover {
 .icon1 {
     height: 40px;
     transform: translateY(0px);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     background-color: #5B0E14;
+    border: 3px solid transparent;
     border-radius: 50%;
 }
 
 .icon1:hover {
     cursor: pointer;
     transform: translateY(-8px);
-    transition: transform 0.3s ease-in-out;
+    background-color: gray;
+    border-color: #5B0E14;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .icon2 {
@@ -504,7 +513,8 @@ ul a:hover {
     height: 40px;
     margin-left: 0.6rem;
     transform: translateY(0px);
-    transition: transform 0.3s ease-in-out;
+    border: 3px solid transparent;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     background-color: #5B0E14;
     border-radius: 50%;
 }
@@ -512,7 +522,9 @@ ul a:hover {
 .icon2:hover {
     cursor: pointer;
     transform: translateY(-8px);
-    transition: transform 0.3s ease-in-out;
+    background-color: gray;
+    border-color: #5B0E14;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .icon3 {
@@ -520,7 +532,8 @@ ul a:hover {
     height: 40px;
     margin-left: 1rem;
     transform: translateY(0px);
-    transition: transform 0.3s ease-in-out;
+    border: 3px solid transparent;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     background-color: #5B0E14;
     border-radius: 50%;
 }
@@ -528,7 +541,9 @@ ul a:hover {
 .icon3:hover {
     cursor: pointer;
     transform: translateY(-8px);
-    transition: transform 0.3s ease-in-out;
+    background-color: gray;
+    border-color: #5B0E14;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /*EmailMe*/
@@ -639,4 +654,57 @@ ul a:hover {
     background-color: #5B0E14;
     width: 100%;
     padding: 1rem;
+}
+
+/*Header*/
+
+.nav-menu {
+    display: none;
+    font-size: 20px;
+    color: #FEFACD;
+}
+
+@media screen and (max-width: 35em) {
+
+    .nav-menu {
+        display: flex;
+        font-size: 20px;
+        color: #FEFACD;
+    }
+
+    .header-menu a {
+        color: #5B0E14;
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s ease, background-color 0.3s ease;
+        transition-delay: 0s, 0.3s, 0s, 0s;
+        will-change: transform, opacity;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        position: absolute;
+        right: 2rem;
+        top: 8rem;
+        width: 20rem;
+        height: fit-content;
+        font-size: 3rem;
+        z-index: 10;
+        border-radius: 20px;
+        padding-bottom: 1rem;
+    }
+
+    .header-menu.active {
+        transition-delay: 0s, 0s, 0s, 0s;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        background-color: #FEFACD;
+        border: #5B0E14 solid 2px;
+        padding: 1rem;
+        border-radius: 10px;
+    }
 }
