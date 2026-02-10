@@ -438,7 +438,7 @@ ul a:hover {
     flex: 0 0 5rem;
     gap: 5rem;
     padding-right: 5rem;
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
     justify-content: center;
     animation: scroll 35s linear infinite;
