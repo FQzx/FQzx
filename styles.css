@@ -750,6 +750,11 @@ ul a:hover {
         height: 35px;
     }
 
+    /*Landing*/
+    .landing-page .opening {
+        font-size: 18px;
+    }
+
     /*About-Page*/
     .about-photo {
         height: 180px;
